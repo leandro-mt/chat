@@ -27,7 +27,10 @@ def main(pagina):
     botao_enviar_mengaem = ft.ElevatedButton("Enviar Mensagem", on_click=Enviar_mensagem)
 
     chat = ft.Column()
-    linha_enviar = ft.Row ({campo_enviar_mensagem, botao_enviar_mengaem})
+    linha_enviar = ft.Row(
+    controls=[campo_enviar_mensagem, botao_enviar_mengaem]
+)
+
     def entra_no_chat(evento):
         # fecha popup
         popup.open = False
